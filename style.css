@@ -62,3 +62,19 @@ span {
 .input-box button:hover {
   background-color: #00406b;
 }
+
+ol {
+  margin-top: 40px;
+  padding: 0;
+  list-style-position: inside;
+}
+
+li {
+  border: 2px solid rgb(88, 88, 88);
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all ease-in-out 0.2s;
+}
