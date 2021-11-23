@@ -8,7 +8,20 @@ body {
 .page-content {
   width: 80%;
   margin: 50px auto;
-  padding: 15px;
+  padding: 30px 15px;
   border-radius: 20px;
   background-color: white;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+span {
+  color: rgb(49, 49, 49);
 }
