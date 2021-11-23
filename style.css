@@ -79,28 +79,20 @@ li {
   border-radius: 10px;
   cursor: pointer;
   font-size: 20px;
+  user-select: none;
 
-  /* transition: all ease-in-out 0.2s; */
+  transition: box-shadow ease-in-out 0.2s;
 }
 
 li:hover {
-  background-color: rgb(196 , 196 , 196);
+  box-shadow: 8px 12px 10px gray;
 }
 
 .selected {
   background-color: gray;
 }
 
-.selected:hover {
-  background-color: rgb(71 , 71 , 71);
-  color: white;
-}
-
 .completed {
   background-color: rgb(181 , 239 , 138);
   text-decoration: line-through solid black;
-}
-
-.completed:hover {
-  background-color: rgb(73 , 204 , 91);
 }
