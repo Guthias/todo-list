@@ -79,7 +79,7 @@ li {
   border-radius: 10px;
   cursor: pointer;
   font-size: 20px;
-  transition: all ease-in-out 0.2s;
+  /* transition: all ease-in-out 0.2s; */
 }
 
 li:hover {
@@ -87,7 +87,7 @@ li:hover {
 }
 
 .selected {
-  background-color: gray;
+  background-color: rgb(128, 128, 128);
 }
 
 .selected:hover {
