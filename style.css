@@ -96,3 +96,31 @@ li:hover {
   background-color: rgb(181 , 239 , 138);
   text-decoration: line-through solid black;
 }
+
+.buttons-area button{
+  padding: 10px 15px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all ease-in-out .2s;
+}
+
+#apaga-tudo {
+  background-color: rgb(221 , 28 , 26);
+}
+
+#apaga-tudo:hover {
+  background-color: rgb(151 , 12 , 24);
+}
+
+#remover-finalizados {
+  background-color: rgb(60 , 211 , 36);
+  color: black;
+}
+
+#remover-finalizados:hover {
+  background-color: rgb(29 , 133 , 13);
+  color: white;
+}
