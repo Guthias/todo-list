@@ -78,3 +78,25 @@ li {
   font-size: 20px;
   transition: all ease-in-out 0.2s;
 }
+
+li:hover:not(.selected) {
+  background-color: rgb(196, 196, 196);
+}
+
+li.selected {
+  background-color: rgb(128, 128, 128);
+}
+
+li.selected:hover {
+  background-color: rgb(71, 71, 71);
+  color: white;
+}
+
+li.completed {
+  background-color: #B5EF8A;
+  text-decoration: line-through solid black;
+}
+
+li.completed:hover {
+  background-color: rgb(73, 204, 91);
+}
