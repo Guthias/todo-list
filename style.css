@@ -131,3 +131,29 @@ li:hover {
 .blue:hover {
   background-color: rgb(0 , 64 , 107);
 }
+
+.up , .down {
+  padding-left: 40px;
+  position: relative;
+}
+
+.up:before , .down:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  width: 0;
+  height: 0;
+  border-left: transparent 8px solid;
+  border-right: transparent 8px solid;
+  transform: translateY(-50%);
+}
+
+.up:before {
+  border-bottom: 10px solid white;
+
+}
+
+.down:before {
+  border-top: 10px solid white;
+}
