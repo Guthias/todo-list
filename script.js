@@ -25,14 +25,20 @@ function listItemEvents(element) {
   element.addEventListener('dblclick', completeItem);
 }
 
-function adicionarTarefa() {
+function adicionarTarefa(text, completed = false) {
   const newTask = document.createElement('li');
-  const text = taskText.value;
+  // const text = taskText.value;
   newTask.innerText = text;
+
   listItemEvents(newTask);
+
+  if (completed) {
+    newTask.className = 'completed';
+  }
+
   taskList.appendChild(newTask);
 
-  taskText.value = '';
+  // taskText.value = '';
 }
 
 function removeTodos() {
@@ -73,7 +79,23 @@ function saveList() {
   localStorage.setItem(taskList, JSON.stringify(listItems));
 }
 
+function loadList() {
+  let listItems = localStorage.getItem(taskList);
+  let elementText;
+  let completed;
+  listItems = JSON.parse(listItems);
+
+  for (let i = 0; i < listItems.length; i += 1) {
+    elementText = listItems[i].text;
+    completed = listItems[i].class;
+
+    adicionarTarefa(elementText, completed);
+  }
+}
+
 addTaskButton.addEventListener('click', adicionarTarefa);
 deleteAllBUtton.addEventListener('click', removeTodos);
 deleteCompletedButton.addEventListener('click', removerCompletos);
 saveButton.addEventListener('click', saveList);
+
+loadList();
