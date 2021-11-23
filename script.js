@@ -4,6 +4,7 @@ const addTaskButton = document.getElementById('criar-tarefa');
 const deleteAllBUtton = document.getElementById('apaga-tudo');
 const deleteCompletedButton = document.getElementById('remover-finalizados');
 const saveButton = document.getElementById('salvar-tarefas');
+const moveUpButton = document.getElementById('mover-cima');
 
 function selectItem(event) {
   const elements = document.querySelectorAll('.selected');
@@ -95,6 +96,15 @@ function loadList() {
   }
 }
 
+function moveUp() {
+  const element = document.querySelector('.selected');
+  const referencePosition = element.previousSibling;
+
+  if (referencePosition) {
+    element.parentNode.insertBefore(element, referencePosition);
+  }
+}
+
 addTaskButton.addEventListener('click', () => {
   adicionarTarefa(taskText.value);
   taskText.value = '';
@@ -102,7 +112,7 @@ addTaskButton.addEventListener('click', () => {
 deleteAllBUtton.addEventListener('click', removeTodos);
 deleteCompletedButton.addEventListener('click', removerCompletos);
 saveButton.addEventListener('click', saveList);
-
+moveUpButton.addEventListener('click', moveUp);
 window.onload = () => {
   if (localStorage.getItem(taskList)) {
     loadList();
