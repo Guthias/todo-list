@@ -66,6 +66,7 @@ function saveList() {
   const listItems = [];
   let elementText;
   let classCompleted;
+
   for (let i = 0; i < elements.length; i += 1) {
     elementText = elements[i].innerText;
     if (elements[i].classList.contains('completed')) {
@@ -84,6 +85,7 @@ function loadList() {
   let elementText;
   let completed;
   listItems = JSON.parse(listItems);
+  console.log(listItems);
 
   for (let i = 0; i < listItems.length; i += 1) {
     elementText = listItems[i].text;
@@ -101,4 +103,8 @@ deleteAllBUtton.addEventListener('click', removeTodos);
 deleteCompletedButton.addEventListener('click', removerCompletos);
 saveButton.addEventListener('click', saveList);
 
-loadList();
+window.onload = () => {
+  if (localStorage.getItem(taskList)) {
+    loadList();
+  }
+};
