@@ -1,1 +1,13 @@
-/* Iniciando o Projeto */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #8FB8ED;
+}
+
+.page-content {
+  width: 80%;
+  margin: 50px auto;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: white;
+}
