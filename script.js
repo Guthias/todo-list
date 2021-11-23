@@ -11,8 +11,15 @@ function selectItem(event) {
   event.target.classList.add('selected');
 }
 
+function completeItem(event) {
+  const element = event.target;
+  element.classList.remove('selected');
+  element.classList.toggle('completed');
+}
+
 function listItemEvents(element) {
   element.addEventListener('click', selectItem);
+  element.addEventListener('dblclick', completeItem);
 }
 
 function adicionarTarefa() {
