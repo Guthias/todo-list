@@ -93,7 +93,10 @@ function loadList() {
   }
 }
 
-addTaskButton.addEventListener('click', adicionarTarefa);
+addTaskButton.addEventListener('click', () => {
+  adicionarTarefa(taskText.value);
+  taskText.value = '';
+});
 deleteAllBUtton.addEventListener('click', removeTodos);
 deleteCompletedButton.addEventListener('click', removerCompletos);
 saveButton.addEventListener('click', saveList);
