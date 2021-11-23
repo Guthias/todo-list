@@ -22,15 +22,17 @@ h1 {
   margin: 0;
   margin-bottom: 10px;
 }
+
 span {
-  color: rgb(49, 49, 49);
+  color: rgb(49 , 49 , 49);
 }
 
 .create-area {
   width: 80%;
   margin: 0 auto;
 }
-.input-box input{
+
+.input-box input {
   background-color: none;
   border: none;
   font-size: 18px;
@@ -47,20 +49,21 @@ span {
   overflow: hidden;
 }
 
-.input-box button{
+.input-box button {
   padding: 10px 15px;
   white-space: nowrap;
   cursor: pointer;
   font-size: 18px;
-  background-color: #0353A4  ;
-  color: #fff;
+  background-color: rgb(3 , 83 , 164);
+  color: white;
   border: none;
   font-weight: 700;
   text-transform: capitalize;
   transition: all ease-in-out 0.2s;
 }
+
 .input-box button:hover {
-  background-color: #00406b;
+  background-color: rgb(0 , 64 , 107);
 }
 
 ol {
@@ -70,7 +73,7 @@ ol {
 }
 
 li {
-  border: 2px solid rgb(88, 88, 88);
+  border: 2px solid rgb(88 , 88 , 88);
   margin-bottom: 20px;
   padding: 10px 20px;
   border-radius: 10px;
@@ -79,24 +82,24 @@ li {
   transition: all ease-in-out 0.2s;
 }
 
-li:hover:not(.selected) {
-  background-color: rgb(196, 196, 196);
+li:hover {
+  background-color: rgb(196 , 196 , 196);
 }
 
-li.selected {
-  background-color: rgb(128, 128, 128);
+.selected {
+  background-color: gray;
 }
 
-li.selected:hover {
-  background-color: rgb(71, 71, 71);
+.selected:hover {
+  background-color: rgb(71 , 71 , 71);
   color: white;
 }
 
-li.completed {
-  background-color: #B5EF8A;
+.completed {
+  background-color: rgb(181 , 239 , 138);
   text-decoration: line-through solid black;
 }
 
-li.completed:hover {
-  background-color: rgb(73, 204, 91);
+.completed:hover {
+  background-color: rgb(73 , 204 , 91);
 }
