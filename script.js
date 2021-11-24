@@ -30,7 +30,6 @@ function listItemEvents(element) {
 
 function adicionarTarefa(text, completed = false) {
   const newTask = document.createElement('li');
-  // const text = taskText.value;
   newTask.innerText = text;
 
   listItemEvents(newTask);
@@ -40,8 +39,6 @@ function adicionarTarefa(text, completed = false) {
   }
 
   taskList.appendChild(newTask);
-
-  // taskText.value = '';
 }
 
 function removeTodos() {
@@ -59,6 +56,7 @@ function removerCompletos() {
     elements[i].remove();
   }
 }
+
 function elementToObject(elementText, elementClass) {
   return { text: elementText,
     class: elementClass };
@@ -88,7 +86,6 @@ function loadList() {
   let elementText;
   let completed;
   listItems = JSON.parse(listItems);
-  console.log(listItems);
 
   for (let i = 0; i < listItems.length; i += 1) {
     elementText = listItems[i].text;
