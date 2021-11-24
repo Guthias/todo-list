@@ -80,11 +80,11 @@ function saveList() {
     listItems.push(elementToObject(elementText, classCompleted));
   }
 
-  localStorage.setItem(taskList, JSON.stringify(listItems));
+  localStorage.setItem('taskList', JSON.stringify(listItems));
 }
 
 function loadList() {
-  let listItems = localStorage.getItem(taskList);
+  let listItems = localStorage.getItem('taskList');
   let elementText;
   let completed;
   listItems = JSON.parse(listItems);
@@ -143,7 +143,7 @@ moveDownButton.addEventListener('click', moveDown);
 removeItemButton.addEventListener('click', removeItem);
 
 window.onload = () => {
-  if (localStorage.getItem(taskList)) {
+  if (localStorage.getItem('taskList')) {
     loadList();
   }
 };
