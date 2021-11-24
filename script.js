@@ -99,6 +99,9 @@ function loadList() {
 
 function moveUp() {
   const element = document.querySelector('.selected');
+  if (!element) {
+    return;
+  }
   const referencePosition = element.previousSibling;
 
   if (referencePosition) {
@@ -108,6 +111,9 @@ function moveUp() {
 
 function moveDown() {
   const element = document.querySelector('.selected');
+  if (!element) {
+    return;
+  }
   const referencePosition = element.nextSibling;
 
   if (referencePosition) {
